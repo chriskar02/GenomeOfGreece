@@ -39,10 +39,49 @@ setTimeout(() => {
   fadeInNumberCards();
 }, 2000);
 
-$('.nav').click(function() {
-  var id = $(this).attr('id');
-  $('html, body').animate({
-    scrollTop: $('#' + id).offset().top
-  }, 1000);
-});
+document.addEventListener("DOMContentLoaded", function() {
 
+  var sections = document.querySelectorAll("section");
+
+  var navLinks = document.querySelectorAll("nav a");
+
+  function scrollToSection(index) {
+    var targetSection = sections[index];
+    var targetOffset = targetSection.offsetTop;
+
+    window.scrollTo({
+      top: targetOffset
+    });
+  }
+
+  function updateActiveSection() {
+    var viewportHeight = window.innerHeight;
+    var scrollPosition = window.scrollY + viewportHeight / 2;
+
+    sections.forEach(function(section, index) {
+      var sectionTop = section.offsetTop;
+      var sectionBottom = sectionTop + section.offsetHeight;
+
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          navLinks.forEach(function(link) {
+            link.classList.remove("active");
+          });
+          navLinks[index].classList.add("active");
+      }
+    });
+  }
+
+  navLinks.forEach(function(link, index) {
+    link.addEventListener("click", function(event) {
+      event.preventDefault();
+      scrollToSection(index);
+    });
+  });
+
+
+  window.addEventListener("scroll", updateActiveSection);
+
+  window.addEventListener("resize", updateActiveSection);
+
+  updateActiveSection(); //for initial home active
+});
