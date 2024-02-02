@@ -1,28 +1,54 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
+  color: #03192e;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
-  background-color: #093f74; /* Greek Blue */
-  color: white;
-  padding: 1em;
+nav {
+  background-color: #093f74;
+  width: 100%;
+  padding: 1%;
   text-align: center;
   position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1; /* Ensure the header stays on top */
+  z-index: 1;
 }
 
-img {
-  width: 400px;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #2c80ff;
+}
+
+.active {
+  color: #2c80ff; 
+  font-weight: 600;
+}
+
+/* home */
+#home {
+  height: 100vh;
+}
+
+#logo {
+  width: 600px;
   height: auto;
 }
 
-.container {
-  color: #093f74;
+#homecnt {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,37 +62,6 @@ img {
 .animation p{
   font-size: 20px;
   text-align: center;
-}
-
-nav {
-  background-color: #093f74; /* Greek Blue */
-  position: sticky;
-  z-index: 2; /* Ensure the navigation stays on top of other elements */
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #093f74;
-}
-
-nav ul li {
-  margin: 0 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-  color: #2c80ff;
 }
 
 #numberCardsHome {
@@ -86,6 +81,32 @@ nav a:hover {
 .numberCard span {
   font-size: 24px;
 }
+
+/* about */
+#about {
+  height: 100vh;
+}
+#img1 {
+  width: 800px;
+  height: auto;
+  float: left;
+}
+
+#aboutcnt p {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#aboutcnt li {
+  color: #06213b;
+  font-size: 18px;
+  list-style-type: disc;
+}
+
+li {
+  list-style: circle;
+}
+
 
 footer {
   background-color: #093f74;

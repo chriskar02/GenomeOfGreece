@@ -9,36 +9,34 @@
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#achievements">Main Achievements</a></li>
-        <li><a href="#approach">Our Approach</a></li>
-        <li><a href="#findings">Findings</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <div class="navbar">
+    <nav>  
+        <a class="nav" id="home">Home</a>
+        <a class="nav" id="about">About</a>
+        <a class="nav" id="achievements">Main Achievements</a>
+        <a class="nav" id="approach">Our Approach</a>
+        <a class="nav" id="findings">Findings</a>
+        <a class="nav" id="contact">Contact</a>
     </nav>
-  </header>
-
-  <section id="home"> 
-
-    <div class="container">
-    <div class="animation">
-      <span id="leftCounter">&gt;0</span>
-      <p>Samples<br>Collected</p>
-    </div>
-
-    <div id="logo">
-      <img src="assets/logo.png" alt="Logo">
-    </div>
-
-    <div class="animation">
-      <span id="rightCounter">&gt;0</span>
-      <p>Genomes<br>Sequenced</p>
-    </div>
   </div>
+
+
+
+  <section id="home">
+
+    <div class="container" id="homecnt">
+      <div class="animation">
+        <span id="leftCounter">&gt;0</span>
+        <p>Samples<br>Collected</p>
+      </div>
+
+      <img src="assets/logo.png" id="logo">
+
+      <div class="animation">
+        <span id="rightCounter">&gt;0</span>
+        <p>Genomes<br>Sequenced</p>
+      </div>
+    </div>
 
 
     <div id="numberCardsHome">
@@ -73,9 +71,15 @@
         <p>National<br>Conferences</p>
       </div>
     </div>
+
   </section>
 
   <section id="about">
+
+    <div class="container" id="aboutcnt">
+      
+      <img src="assets/card.jpg" id="img1">
+    
       <p>The "GoGreece" initiative is a long-term National Genomics project, focused on the implementation of Genomic Medicine in Greece. 
         Officially launched in March 2010, the long-term aims and goals of the “Genome of Greece (GoGreece)” initiative is to:
         <li>Determine the allelic architecture of the Hellenic population, especially focusing on rare, pathogenic or not, variants that are characteristic for the Hellenic population,</li>
@@ -85,15 +89,14 @@
         <li>Address important ethical, legal and societal issues pertaining to the implementation of Genomic Medicine interventions in Greece,</li>
         <li>Enhance the genomics education of healthcare professionals and biomedical scientists in Greece, and</li>
         <li>Raise genomics awareness of the general public.</li>
-        
+      </p>
+      <p>
         Reference:
         Patrinos GP, Pasparakis E, Koiliari E, Pereira AC, Hünemeier T, Pereira LV, Mitropoulou C. (2020). Roadmap for Establishing Large-Scale Genomic Medicine Initiatives in Low- and Middle-Income Countries. Am J Hum Genet. 107(4):589-595.
-        </p>
+      </p>
+    </div>
   </section>
-
-  <footer>
-    <p>Contact us: permed@upatras.gr</p>
-  </footer>
+  
 
   <script src="app.js"></script>
 </body>

@@ -1,6 +1,6 @@
 function startCounter(elementId, targetValue) {
   let startTime;
-  const duration = 2500;
+  const duration = 2000;
 
   function cubicBezier(t) {
     return t * (2 - t); //gradual slowdown
@@ -28,13 +28,21 @@ function fadeInNumberCards() {
     card.style.transition = 'opacity 1s ease-out';
     setTimeout(() => {
       card.style.opacity = '1';
-    }, index * 500); // Adjust the delay as needed
+    }, index * 500);
   });
 }
 
 
-  startCounter('leftCounter', 2000),
-  startCounter('rightCounter', 600)
-  setTimeout(() => {
-    fadeInNumberCards();
-  }, 2500);
+startCounter('leftCounter', 2000),
+startCounter('rightCounter', 600);
+setTimeout(() => {
+  fadeInNumberCards();
+}, 2000);
+
+$('.nav').click(function() {
+  var id = $(this).attr('id');
+  $('html, body').animate({
+    scrollTop: $('#' + id).offset().top
+  }, 1000);
+});
+
