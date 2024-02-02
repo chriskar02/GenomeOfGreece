@@ -43,8 +43,6 @@ section {
   flex-direction: column;
   justify-content: center;
   padding: 2%;
-  padding-top: 0;
-  height: 100vh;
 }
 
 .link {
@@ -63,6 +61,11 @@ section {
 }
 
 /* home */
+#home {
+  padding-top:0;
+  height: 100vh;
+}
+
 #logo {
   width: 40%;
   height: auto;
@@ -103,7 +106,12 @@ section {
 }
 
 /* about */
-#cardcnt {
+#about {
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+
+.cardcnt {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -126,9 +134,11 @@ section {
 
 /* approach */
 #approach {
-  height: 400vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-#wheelcnt {
+
+.wheelcnt {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,34 +174,34 @@ section {
   border-radius: 8px;
 }
 
-#imgcnt {
+.imgcnt {
   padding-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-bottom: 0;
+  gap: 50px;
 }
 
 #img3 {
-  height: 25%;
+  height: 50vh;
   width: auto;
-  margin: 0 50px;
 }
 
 #img4 {
-  height: 25%;
+  height: 50vh;
   width: auto;
 }
 
 #img5 {
-  height: 25%;
+  height: 50vh;
   width: auto;
-  margin: 0 50px;
 }
 
 /* findings */
-#findings {
-  height: 200vh;
+#findings{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .grid-list {
@@ -208,10 +218,55 @@ section {
   border-radius: 8px;
 }
 
+.ref-list{
+  list-style: decimal;
+}
 
+/* contact */
+#contact {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+hr {
+  color:#093f74;
+}
+
+/* footer */
 footer {
   background-color: #093f74;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 2%;
   text-align: center;
-  padding: 10px;
+  
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.footer-link {
+  font-weight: bold;
+  color: whitesmoke;
+  text-decoration: none; /* remove underline */
+  transition: color 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+}
+
+.footer-link:hover{
+  color: #2c80ff;
+}
+
+.coordcnt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:100px;
+}
+
+img {
+  height:80px;
+  width: auto;
 }
